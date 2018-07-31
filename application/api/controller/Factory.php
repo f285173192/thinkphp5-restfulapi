@@ -19,6 +19,7 @@ class Factory
     {
         if (!isset(self::$Factory[$className]) || !self::$Factory[$className]) {
             self::$Factory[$className] = new $className($options);
+         //self::$Factory[$className]只是一个存放对象的容器,也可以 self::$Factory
         }
         return self::$Factory[$className];
     }
